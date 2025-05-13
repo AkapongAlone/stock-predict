@@ -13,8 +13,8 @@ type ListedCompanyEODPriceBySecurityType struct {
 	Average           float64     `json:"average"`
 	AomVolume         float64     `json:"aomVolume"`
 	AomValue          float64     `json:"aomValue"`
-	TrVolume          float64     `json:"trVolume"`
-	TrValue           float64     `json:"trValue"`
+	TrVolume          interface{} `json:"trVolume"` // เปลี่ยนเป็น interface{} เพื่อรองรับ null
+	TrValue           interface{} `json:"trValue"`  // เปลี่ยนเป็น interface{} เพื่อรองรับ null
 	TotalVolume       float64     `json:"totalVolume"`
 	TotalValue        float64     `json:"totalValue"`
 	Pe                interface{} `json:"pe"`
